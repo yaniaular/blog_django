@@ -14,4 +14,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    (r'^$', 'blog.views.index'),
+    # con esto le decimos a django que toda peticion hecha a la raiz del blog
+    # sera manejada por la funcion index ubicada en el archivo views
 )
+

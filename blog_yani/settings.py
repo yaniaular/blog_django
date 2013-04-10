@@ -107,10 +107,13 @@ ROOT_URLCONF = 'blog_yani.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'blog_yani.wsgi.application'
 
+import os
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(__file__) ,"templates"), #path con las plantillas de la web
+    # Asi el script puede encontrar el directorio templates aun cuando cambiemos de ubicacion la carpeta del proyecto
 )
 
 INSTALLED_APPS = (
